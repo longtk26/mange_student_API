@@ -4,10 +4,11 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 app.use("/api", rootRouter);
 
 app.get("/", (req, res) => {
-    res.json({ message: "Welcome to API manage student" });
+    res.json({ message: "Welcome to API manage students!" });
 });
 
 app.listen(8080, () => {
