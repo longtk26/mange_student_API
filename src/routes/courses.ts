@@ -1,9 +1,18 @@
 import { Router } from "express";
+import {
+    getCourses,
+    getCourse,
+    createCourse,
+    updateCourse,
+    deleteCourse,
+} from "../controllers/courseController";
 
 const coursesRoute = Router();
 
-coursesRoute.get("/", (req, res) => {
-    res.json({ message: "Hello this is service for API courses" });
-});
+coursesRoute.get("/", getCourses);
+coursesRoute.get("/:id", getCourse);
+coursesRoute.post("/new", createCourse);
+coursesRoute.put("/:id", updateCourse);
+coursesRoute.delete("/:id", deleteCourse);
 
 export default coursesRoute;

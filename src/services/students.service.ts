@@ -1,5 +1,5 @@
 import { RowDataPacket } from "mysql2";
-import { InfoUpdateType } from "../types";
+import { InfoUpdateTypeStudent } from "../types";
 import db from "../config/db";
 
 export const getAllStudents = async () => {
@@ -51,7 +51,7 @@ export const createStudent = async (
 };
 
 export const updateStudentById = async (
-    infoUpdate: InfoUpdateType,
+    infoUpdate: InfoUpdateTypeStudent,
     id: string
 ) => {
     try {
